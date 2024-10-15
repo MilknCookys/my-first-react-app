@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import FunctionalInput from "./FunctionalInput";
+import ClassInput from "./ClassComponent";
+import ClassCount from "./ClassCount";
+import "../src/index.css";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <FunctionalInput name="Functional component!" />
+    <div className="divider" />
+    <ClassInput name="Class based component!" />
+  </StrictMode>
+);
